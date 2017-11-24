@@ -11,6 +11,7 @@ public class Server {
 
     public void startConnectionManagment() throws IOException {
         while (true) {
+            System.out.println("Waiting a client");
             Socket clientSocket = socketOnService.accept();
             System.out.println("Client Accepted");
             new Connection(clientSocket).start();
