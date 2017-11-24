@@ -6,7 +6,7 @@ public class Server {
     private ServerSocket socketOnService;
 
     public void openSocket() throws IOException {
-        socketOnService = new ServerSocket(1024);
+        socketOnService = new ServerSocket(9000);
     }
 
     public void startConnectionManagment() throws IOException {
