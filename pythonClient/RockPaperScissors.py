@@ -12,9 +12,10 @@ class Client:
         self.service_socket.connect(('localhost', 9000))
 
     def send_action(self, data):
-        self.service_socket.send(data)
+        print("Sending data")
+        self.service_socket.sendall(data + "\n")
         received_data = self.service_socket.recv(512)
-        print(received_data)
+        print("Received: ", received_data)
         return received_data
 
 

@@ -8,6 +8,7 @@ class Game:
         print("instructions")
 
     def process_action(self, action):
+        print("Preparing data for the server")
         return "asd"
 
     def notify_result(self, response):
