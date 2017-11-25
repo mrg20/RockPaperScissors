@@ -14,7 +14,6 @@ public class Connection extends Thread{
 
     @Override
     public void run(){
-        System.out.println("Server routine starting");
         try {
             openInputSocket();
             openOutputSocket();
@@ -39,7 +38,7 @@ public class Connection extends Thread{
 
     private void inputOutputController() throws IOException {
         while (true) {
-            System.out.println("Waiting for client input");
+            System.out.println("Waiting input");
             String clientInfo = readSocket();
             System.out.println("Info received: " + clientInfo);
             String matchResult = gameController.getMatchResult(clientInfo);

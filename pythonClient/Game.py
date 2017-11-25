@@ -8,8 +8,7 @@ class Game:
         print("instructions")
 
     def process_action(self, action):
-        print("Preparing data for the server")
         return "asd"
 
     def notify_result(self, response):
-        print (response)
+        print ("And the winner is: ", response)

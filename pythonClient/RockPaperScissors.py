@@ -7,15 +7,12 @@ from Game import Game
 
 class Client:
     def open_socket(self):
-        print("Opening the socket")
         self.service_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.service_socket.connect(('localhost', 9000))
 
     def send_action(self, data):
-        print("Sending data")
         self.service_socket.sendall(data + "\n")
         received_data = self.service_socket.recv(512)
-        print("Received: ", received_data)
         return received_data
 
 

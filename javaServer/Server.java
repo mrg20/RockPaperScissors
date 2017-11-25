@@ -11,11 +11,11 @@ public class Server {
 
     public void startConnectionManagment() throws IOException {
         while (true) {
-            System.out.println("Waiting a client");
+            System.out.println("MACHINE: Waiting a client");
             Socket clientSocket = socketOnService.accept();
-            System.out.println("Client accepted");
+            System.out.println("MACHINE: Client accepted");
             new Connection(clientSocket).start();
-            System.out.println("Connection started with one client");
+            System.out.println("MACHINE: Connection started with one client");
         }
     }
 }
