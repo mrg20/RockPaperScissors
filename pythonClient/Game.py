@@ -7,8 +7,8 @@ class Game:
     def instructions(self):
         print("instructions")
 
-    def notify_result(self, response):
-        pass
-
     def process_action(self, action):
-        pass
+        return "asd"
+
+    def notify_result(self, response):
+        print (response)
