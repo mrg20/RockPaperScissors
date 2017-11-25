@@ -22,7 +22,7 @@ if __name__ == '__main__':
     game.instructions()
     client.open_socket()
     while (True):
-        print("Enter an action:")
+        print("Enter one option (Rock, Paper, or Scissors):")
         action = raw_input()
         info_to_send = game.process_action(action)
         response = client.send_action(info_to_send)
