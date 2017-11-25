@@ -13,9 +13,9 @@ public class Server {
         while (true) {
             System.out.println("Waiting a client");
             Socket clientSocket = socketOnService.accept();
-            System.out.println("Client Accepted");
+            System.out.println("Client accepted");
             new Connection(clientSocket).start();
-            System.out.println("Connection Started");
+            System.out.println("Connection started with one client");
         }
     }
 }
