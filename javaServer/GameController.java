@@ -6,6 +6,6 @@ public class GameController {
 
     public String getMatchResult(String clientInfo){
         System.out.println("A client send:" + clientInfo);
-        return "";
+        return "data";
     }
 }

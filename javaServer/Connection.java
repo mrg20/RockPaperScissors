@@ -1,10 +1,8 @@
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 
 public class Connection extends Thread{
-    private DataInputStream input;
+    private BufferedReader input;
     private DataOutputStream output;
     private Socket serviceSocket;
     private GameController gameController;
@@ -32,7 +30,7 @@ public class Connection extends Thread{
     }
 
     public void openInputSocket() throws IOException {
-        input = new DataInputStream(serviceSocket.getInputStream());
+        input = new BufferedReader(new InputStreamReader(serviceSocket.getInputStream()));
     }
 
     public void openOutputSocket() throws IOException {
@@ -51,7 +49,7 @@ public class Connection extends Thread{
     }
 
     public String readSocket() throws IOException {
-        return input.readUTF();
+        return input.readLine();
     }
 
     public void sendInformation(String information) throws IOException {
