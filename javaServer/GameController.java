@@ -4,7 +4,7 @@ public class GameController {
         System.out.println("Game Instructions");
     }
 
-    public String getMatchResult(String clientInfo){
+    public String doMatch(String clientInfo){
         return "data";
     }
 }

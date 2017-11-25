@@ -41,7 +41,7 @@ public class Connection extends Thread{
             System.out.println("Waiting input");
             String clientInfo = readSocket();
             System.out.println("Info received: " + clientInfo);
-            String matchResult = gameController.getMatchResult(clientInfo);
+            String matchResult = gameController.doMatch(clientInfo);
             System.out.println("Sending info: " + matchResult);
             sendInformation(matchResult);
         }
