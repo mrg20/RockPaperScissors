@@ -14,6 +14,11 @@ class Game:
             "Papel": "2",
             "Tijeras": "3"
         }
+        self.result = {
+            "0": _("YOU WIN THIS TIME"),
+            "1": _("DRAFT, USED THE SAME ACTIONS"),
+            "2": _("YOU LOSE, THIS AI IS POWERFUL")
+        }
 
     def instructions(self):
         print _("This is the rock, paper, scissors game.")
@@ -23,5 +28,5 @@ class Game:
     def process_action(self, action):
         return self.actions[action]
 
-    def notify_result(self, response):
-        print _("The result is: "), response
+    def notify_result(self, server_response):
+        print _("The result is: "), self.result[server_response]
