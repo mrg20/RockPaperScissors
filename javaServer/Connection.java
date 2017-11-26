@@ -4,7 +4,7 @@ import java.util.ResourceBundle;
 
 public class Connection extends Thread{
     private BufferedReader input;
-    private DataOutputStream output;
+    private PrintWriter output;
     private Socket serviceSocket;
     private GameController gameController;
     private ResourceBundle i18n;
@@ -36,7 +36,8 @@ public class Connection extends Thread{
     }
 
     public void openOutputSocket() throws IOException {
-        output = new DataOutputStream(serviceSocket.getOutputStream());
+        output = new PrintWriter(new OutputStreamWriter(serviceSocket.getOutputStream(),
+                "UTF-8"), true);
     }
 
     private void inputOutputController() throws IOException {
@@ -55,6 +56,6 @@ public class Connection extends Thread{
     }
 
     public void sendInformation(String information) throws IOException {
-        output.writeUTF(information);
+        output.println(information);
     }
 }
