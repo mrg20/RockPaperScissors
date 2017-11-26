@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function
 import gettext
 
 class Game:
     def __init__(self):
-        gettext.install(domain='Game', localedir='locales')
         self.actions = {
             "Rock": "1",
             "Paper": "2",
