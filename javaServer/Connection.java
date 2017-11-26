@@ -1,15 +1,18 @@
 import java.io.*;
 import java.net.Socket;
+import java.util.ResourceBundle;
 
 public class Connection extends Thread{
     private BufferedReader input;
     private DataOutputStream output;
     private Socket serviceSocket;
     private GameController gameController;
+    private ResourceBundle i18n;
 
     public Connection(Socket serviceSocket){
         this.serviceSocket = serviceSocket;
         gameController = new GameController();
+        i18n = Internationalization.getI18n();
     }
 
     @Override
@@ -38,11 +41,11 @@ public class Connection extends Thread{
 
     private void inputOutputController() throws IOException {
         while (true) {
-            System.out.println("Waiting input");
+            System.out.println(i18n.getString("wait"));
             String clientInfo = readSocket();
-            System.out.println("Info received: " + clientInfo);
+            System.out.println(i18n.getString("received") + clientInfo);
             String matchResult = gameController.doMatch(clientInfo);
-            System.out.println("Sending info: " + matchResult);
+            System.out.println(i18n.getString("sending") + matchResult);
             sendInformation(matchResult);
         }
     }
