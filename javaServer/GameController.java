@@ -1,9 +1,17 @@
 import java.util.Random;
+import java.util.ResourceBundle;
 
 public class GameController {
+    private ResourceBundle i18n;
+
+    public GameController(){
+        i18n = Internationalization.getI18n();
+    }
 
     public void printInstructions(){
-        System.out.println("Game Instructions");
+        System.out.println(i18n.getString("INSTRUCTIONS1"));
+        System.out.println(i18n.getString("INSTRUCTIONS2"));
+        System.out.println(i18n.getString("INSTRUCTIONS3"));
     }
 
     public String doMatch(String clientInfo){
@@ -21,10 +29,10 @@ public class GameController {
     private String compareActions(int action, int clientAction) {
         int[] winList=new int[]{3, 1, 2};
         if(winList[clientAction-1] == action){
-            return "YOU WIN THIS TIME";
+            return i18n.getString("WIN");
         }else if(action == clientAction){
-            return "DRAFT, USED THE SAME COMMANDS";
+            return i18n.getString("DRAFT");
         }
-        return "YOU LOSE, THIS AI IS POWERFUL";
+        return i18n.getString("LOSE");
     }
 }
