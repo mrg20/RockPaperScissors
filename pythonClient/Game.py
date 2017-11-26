@@ -24,4 +24,4 @@ class Game:
         return self.actions[action]
 
     def notify_result(self, response):
-        print _("The result is: ", response)
+        print _("The result is: "), response
