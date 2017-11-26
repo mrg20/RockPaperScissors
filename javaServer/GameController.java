@@ -29,10 +29,13 @@ public class GameController {
     private String compareActions(int action, int clientAction) {
         int[] winList=new int[]{3, 1, 2};
         if(winList[clientAction-1] == action){
-            return i18n.getString("WIN");
+            System.out.println(i18n.getString("WIN"));
+            return "0";
         }else if(action == clientAction){
-            return i18n.getString("DRAFT");
+            System.out.println(i18n.getString("DRAFT"));
+            return "1";
         }
-        return i18n.getString("LOSE");
+        System.out.println(i18n.getString("LOSE"));
+        return "2";
     }
 }
