@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
-
+import gettext
 
 class Game:
     def __init__(self):
+        gettext.install(domain='Game', localedir='locales')
         self.actions = {
             "Rock": "1",
             "Paper": "2",
@@ -17,12 +18,12 @@ class Game:
         }
 
     def instructions(self):
-        print("This is the rock, paper, scissors game.")
-        print("The server must be open if you want to play.")
-        print("Just type the option that you want and have fun :)")
+        print _("This is the rock, paper, scissors game.")
+        print _("The server must be open if you want to play.")
+        print _("Just type the option that you want and have fun :)")
 
     def process_action(self, action):
         return self.actions[action]
 
     def notify_result(self, response):
-        print ("The result is: ", response)
+        print _("The result is: ", response)

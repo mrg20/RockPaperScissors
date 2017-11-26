@@ -2,6 +2,7 @@
 
 from __future__ import print_function
 import socket
+import gettext
 from Game import Game
 
 
@@ -17,12 +18,14 @@ class Client:
 
 
 if __name__ == '__main__':
+    gettext.install(domain='RockPaperScissors', localedir='locales')
+
     client = Client()
     game = Game()
     game.instructions()
     client.open_socket()
     while (True):
-        print("Enter one option (Rock, Paper, or Scissors):")
+        print _("Enter one option (Rock, Paper, or Scissors):")
         action = raw_input()
         info_to_send = game.process_action(action)
         response = client.send_action(info_to_send)
