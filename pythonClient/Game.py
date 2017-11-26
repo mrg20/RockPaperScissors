@@ -12,6 +12,7 @@ class Game:
             "Roca": "1",
             "Paper": "2",
             "Tisores": "3",
+            "Piedra": "1",
             "Papel": "2",
             "Tijeras": "3"
         }
