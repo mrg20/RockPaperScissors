@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-26 12:26+0100\n"
+"POT-Creation-Date: 2017-11-26 13:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: Game.py:18
+msgid "YOU WIN THIS TIME"
+msgstr ""
+
 #: Game.py:19
-msgid "This is the rock, paper, scissors game."
+msgid "DRAFT, USED THE SAME ACTIONS"
 msgstr ""
 
 #: Game.py:20
+msgid "YOU LOSE, THIS AI IS POWERFUL"
+msgstr ""
+
+#: Game.py:24
+msgid "This is the rock, paper, scissors game."
+msgstr ""
+
+#: Game.py:25
 msgid "The server must be open if you want to play."
 msgstr ""
 
-#: Game.py:21
+#: Game.py:26
 msgid "Just type the option that you want and have fun :)"
 msgstr ""
 
-#: Game.py:27
+#: Game.py:32
 msgid "The result is: "
 msgstr ""

@@ -29,4 +29,4 @@ class Game:
         return self.actions[action]
 
     def notify_result(self, server_response):
-        print _("The result is: "), self.result[server_response]
+        print _("The result is: "), self.result[server_response.split("\n").pop(0)]

@@ -21,6 +21,18 @@ msgstr ""
 msgid "Enter one option (Rock, Paper, or Scissors):"
 msgstr "Entra una opció (Pedra, Paper o Tisores):"
 
+#: Game.py:18
+msgid "YOU WIN THIS TIME"
+msgstr "GUANYES TU, AQUEST COP"
+
+#: Game.py:19
+msgid "DRAFT, USED THE SAME ACTIONS"
+msgstr "EMPAT! HEM UTILITZAT EL MATEIX MOVIMENT"
+
+#: Game.py:20
+msgid "YOU LOSE, THIS AI IS POWERFUL"
+msgstr "PERDS! SOC PODEROS"
+
 #: Game.py:21
 msgid "This is the rock, paper, scissors game."
 msgstr "Aquest el joc del Pedra, Paper o Tisores"
